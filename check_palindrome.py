@@ -5,6 +5,7 @@
       print(f"{text} is not a palindrome")
 
 
+<<<<<<< HEAD
 choice = input("Enter 't' for text or 'f' for file: ")
 if choice == "t":
    text = input("Enter text to check for palindrome: ")
@@ -18,3 +19,11 @@ elif choice == "f":
       print(f"Unable to process file at {file}")
 else:
    print("Invalid choice")
+=======
+try:
+    filepath = input("Enter filepath for palindrome check: ")
+    text = open(filepath, "r").read()
+    check_palindrome(text)
+except OSError:
+    print(f"Unable to process file at {filepath}")
+>>>>>>> 3777b81 (Fixed bugs with filepath variable, added more specific exception)
